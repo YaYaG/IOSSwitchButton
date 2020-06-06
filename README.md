@@ -76,3 +76,12 @@ disable ：禁止切换
         app:disable="false"
         />
 ```
+#### 监听: 
+```
+iosSwitchButton.setSwitchListener(new SwitchListener() {
+            @Override
+            public void changeCheck(boolean check) {
+                Toast.makeText(MainActivity.this, check ? "开启" : "关闭", Toast.LENGTH_SHORT).show();
+            }
+        });
+```
