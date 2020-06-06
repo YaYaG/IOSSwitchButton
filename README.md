@@ -2,11 +2,11 @@
 
 ## 效果图 
 
-<img src="https://raw.githubusercontent.com/YaYaG/IOSSwitchButton/master/img/cb.png" width="120" height="120" align="middle" />
+<img src="https://raw.githubusercontent.com/YaYaG/IOSSwitchButton/master/img/cb.png" width="142" height="127" align="middle" />
 
 ## 引入依赖 App依赖：
 
-### app项目中build.gradl添加：
+### app项目中build.gradle添加：
 
 ```
     implementation 'com.yayaG.iosSwitchButton:iosswitchbutton:1.0.3'
