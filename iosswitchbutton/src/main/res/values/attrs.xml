@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="IOSSwitchButton">
+        <attr name="check_color" format="color"/>
+        <attr name="uncheck_color" format="color"/>
+        <attr name="switchColor" format="color"/>
+        <attr name="check" format="boolean"/>
+        <attr name="disable" format="boolean"/>
+    </declare-styleable>
+
+</resources>
