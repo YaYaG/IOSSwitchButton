@@ -5,26 +5,29 @@
 <img src="https://raw.githubusercontent.com/YaYaG/IOSSwitchButton/master/img/cb.png" width="120" height="120" align="middle" />
 
 
+
+##属性含义：
+```
+check : 是否开启
+switchColor ：switch圆形颜色
+check_color ： 选中颜色
+uncheck_color ：未选中颜色
+disable ：禁止切换
+```
+
 ##布局写法
 ```
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".MainActivity">
-
-    <com.jackwang.ioscheck.IOSSwitchButton
+<com.jackwang.ioscheck.IOSSwitchButton
         android:id="@+id/ios_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:check="true"
         />
+<?xml version="1.0" encoding="utf-8"?>
+```
 
-    <com.jackwang.ioscheck.IOSSwitchButton
+```
+<com.jackwang.ioscheck.IOSSwitchButton
         android:id="@+id/ios_switch2"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -36,6 +39,4 @@
         app:check="true"
         app:disable="false"
         />
-
-</LinearLayout>
 ```
