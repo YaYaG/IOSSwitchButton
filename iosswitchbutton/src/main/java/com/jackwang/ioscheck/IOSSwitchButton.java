@@ -86,10 +86,10 @@ public class IOSSwitchButton extends View implements View.OnClickListener {
             if (!mCheck) {
                 mRx = mRadius + dipToPx(2);
             } else {
-                mRx = getWidth() - mRadius - dipToPx(2);
+                mRx = getWidth() - getHeight() / 2;
             }
         }
-        canvas.drawCircle(mRx, mRadius + dipToPx(2), mRadius, mSwitchPaint);
+        canvas.drawCircle(mRx, getHeight() / 2, mRadius, mSwitchPaint);
     }
 
 
@@ -119,9 +119,8 @@ public class IOSSwitchButton extends View implements View.OnClickListener {
     }
 
     private void drawAnim() {
-        int outRadius = mRadius + dipToPx(2);
-        ValueAnimator valueAnimator = ObjectAnimator.ofInt(mCheck ? outRadius : getWidth() - outRadius
-                , mCheck ? getWidth() - outRadius : outRadius);
+        ValueAnimator valueAnimator = ObjectAnimator.ofInt(mCheck ? getHeight()/2 : getWidth() - getHeight()/2
+                , mCheck ? getWidth() - getHeight()/2 : getHeight()/2);
         valueAnimator.setInterpolator(new AccelerateInterpolator());
         valueAnimator.setDuration(300);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -151,7 +150,7 @@ public class IOSSwitchButton extends View implements View.OnClickListener {
         }
     }
 
-    public void setSwitchColor(int checkColor,int unCheckColor) {
+    public void setSwitchColor(int checkColor, int unCheckColor) {
         mCheckColor = checkColor;
         mUnCheckColor = unCheckColor;
         invalidate();
