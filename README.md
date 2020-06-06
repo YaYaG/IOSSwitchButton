@@ -39,5 +39,3 @@
 
 </LinearLayout>
 ```
-
-# IOSSwitchButton

@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin:'com.github.dcendents.android-maven'
+apply plugin:'com.jfrog.bintray'
 
 android {
     compileSdkVersion 29
@@ -31,4 +33,133 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+
+//项目主页
+
+def siteUrl ='https://github.com/YaYaG/IOSSwitchButton'
+
+//项目的版本控制地址
+
+def gitUrl ='https://github.com/YaYaG/IOSSwitchButton.git'
+
+//发布到组织名称名字，必须填写
+
+group ="com.yayaG.iosSwitchButton"
+
+//发布到JCenter上的项目名字，必须填写
+
+def libName ="IOSSwitchButton"
+
+// 版本号，下次更新是只需要更改版本号即可
+
+version ="0.0.1"
+
+/**  上面配置后上传至jcenter后的编译路径是这样的：compile 'cn.bluemobi.dylan:sqlitelibrary:1.0'  **/
+
+//生成源文件
+
+task sourcesJar(type: Jar) {
+
+    from android.sourceSets.main.java.srcDirs
+
+    classifier ='sources'
+
+}
+
+// 配置maven库，生成POM.xml文件
+
+install {
+
+    repositories.mavenInstaller {
+
+// This generates POM.xml with proper parameters
+
+        pom {
+
+            project {
+
+                packaging'aar'
+
+                name'a dot progressbar framework'
+
+                url siteUrl
+
+                licenses {
+
+                    license {
+
+                        name'a dot progressbar framework'
+
+                        url'https://github.com/YaYaG/IOSSwitchButton'
+
+                    }
+
+                }
+
+                developers {
+
+                    developer {
+
+                        id'yayaG'
+
+                        name'wangjinya'
+
+                        email 'wangjinya123456@gmail.com'
+
+                    }
+
+                }
+
+                scm {
+
+                    connection gitUrl
+
+                    developerConnection gitUrl
+
+                    url siteUrl
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+//上传到jcenter
+
+Properties properties =new Properties()
+
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+
+    user = 'wangjinya'//读取 local.properties 文件里面的bintray.user
+
+    key = '6f316db9a9fed089b2cd20e70ae4e527f2c9d5eb'//读取 local.properties 文件里面的bintray.apikey
+
+    configurations = ['archives']
+
+    pkg {
+
+        repo ="maven"
+
+        name ="IOSSwitchButton"//发布到JCenter上的项目名字，必须填写
+
+        desc ='a dot progressbar framework' //项目描述
+
+        websiteUrl = siteUrl
+
+        vcsUrl = gitUrl
+
+        licenses = ["Apache-2.0"]
+
+        publish =true
+
+        }
+
 }
