@@ -6,7 +6,7 @@
 
 
 
-##属性含义：
+## 属性含义：
 ```
 check : 是否开启
 switchColor ：switch圆形颜色
@@ -15,7 +15,7 @@ uncheck_color ：未选中颜色
 disable ：禁止切换
 ```
 
-##布局写法
+## 布局写法
 ```
 <com.jackwang.ioscheck.IOSSwitchButton
         android:id="@+id/ios_switch"
@@ -23,8 +23,8 @@ disable ：禁止切换
         android:layout_height="wrap_content"
         app:check="true"
         />
-<?xml version="1.0" encoding="utf-8"?>
 ```
+
 
 ```
 <com.jackwang.ioscheck.IOSSwitchButton
