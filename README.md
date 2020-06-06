@@ -4,7 +4,43 @@
 
 <img src="https://raw.githubusercontent.com/YaYaG/IOSSwitchButton/master/img/cb.png" width="120" height="120" align="middle" />
 
+##引入依赖
 
+### app项目中添加：
+
+```
+    implementation 'com.yayaG.iosSwitchButton:iosswitchbutton:1.0.3'
+    
+```
+
+###在主项目中的build.gradle添加
+
+```
+    maven { url 'https://dl.bintray.com/wangjinya/maven' }
+```
+
+```
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://maven.google.com' }
+        maven { url 'https://dl.bintray.com/wangjinya/maven' }
+    }
+}
+
+```
+
+### 在 maven 中配置如下
+
+```
+    <dependency>
+    	<groupId>com.yayaG.iosSwitchButton</groupId>
+    	<artifactId>iosswitchbutton</artifactId>
+    	<version>1.0.3</version>
+    	<type>pom</type>
+    </dependency>
+```
 
 ## 属性含义：
 ```
