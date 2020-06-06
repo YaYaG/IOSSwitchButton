@@ -4,16 +4,16 @@
 
 <img src="https://raw.githubusercontent.com/YaYaG/IOSSwitchButton/master/img/cb.png" width="120" height="120" align="middle" />
 
-##引入依赖
+## 引入依赖 App依赖：
 
-### app项目中添加：
+### app项目中build.gradl添加：
 
 ```
     implementation 'com.yayaG.iosSwitchButton:iosswitchbutton:1.0.3'
     
 ```
 
-###在主项目中的build.gradle添加
+### 在主项目中的build.gradle添加
 
 ```
     maven { url 'https://dl.bintray.com/wangjinya/maven' }
